@@ -1,10 +1,10 @@
 This is the main vulnerability table — it lists each detected issue from your spotbugsXml.xml file.
 For example:
 
-#	File / Class	Vulnerability Type	Severity	Description	Recommendation
-1	AsciiDoctorTemplateResolver.java	Reliance on Default Encoding	High	Uses system default character encoding which may cause inconsistent data handling.	Specify StandardCharsets.UTF_8.
-2	VulnerableTaskHolder.java	Resource Leak	Medium	Input streams not properly closed, leading to resource leaks.	Use try-with-resources.
-3	AttackResult.java	Mutable Object Exposure	Medium	Mutable arrays are returned directly.	Return cloned arrays or immutable objects.
-4	EnvironmentExposure.java	Static Field Written by Instance Method	High	Instance methods modify static fields (thread safety issue).	Avoid shared mutable static fields.
-5	DatabaseConfiguration.java	Internal Representation Exposure	Medium	Mutable configuration objects shared externally.	Return deep copies.
-6	WebSecurityConfig.java	Mutable Object Return	Medium	Service object returned, can be modified externally.	Use dependency injection safely.
+#	File / Class	                       Vulnerability Type	                      Severity	              Description	and Recommendation
+1	AsciiDoctorTemplateResolver.java	 Reliance on Default Encoding	              High	         Uses system default character encoding which may cause inconsistent data handling.	Specify StandardCharsets.UTF_8.
+2	VulnerableTaskHolder.java       	 Resource Leak	                            Medium	       Input streams not properly closed, leading to resource leaks.	Use try-with-resources.
+3	AttackResult.java	                 Mutable Object Exposure	                  Medium	       Mutable arrays are returned directly.	Return cloned arrays or immutable objects.
+4	EnvironmentExposure.java	         Static Field Written by Instance Method	  High	         Instance methods modify static fields (thread safety issue).	Avoid shared mutable static fields.
+5	DatabaseConfiguration.java	       Internal Representation Exposure	          Medium	       Mutable configuration objects shared externally.	Return deep copies.
+6	WebSecurityConfig.java	           Mutable Object Return	                    Medium	       Service object returned, can be modified externally.	Use dependency injection safely.
